@@ -23,6 +23,7 @@ class SplashPageJsAcceptanceTest < Test::Unit::TestCase
         </head>
         <body>
         <script type="text/javascript" language="javascript">//<![CDATA[
+         setTimeout(function(){}, 2000);
          setTimeout(function(){window.location.replace("#{target_url}");},1000);
         //]]>
         </script>
@@ -51,7 +52,7 @@ class SplashPageJsAcceptanceTest < Test::Unit::TestCase
   end
 
   def wait_for_redirect
-    sleep(1)
+    sleep(4)
   end
 
   def current_uri
